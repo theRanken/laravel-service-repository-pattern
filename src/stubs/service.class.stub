@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+class {{ name }}Service implements {{ name }}ServiceInterface
+{
+
+    // Implement service methods here
+    
+}

@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+interface {{ name }}RepositoryInterface
+{
+
+    // Define repository methods here
+    
+}
