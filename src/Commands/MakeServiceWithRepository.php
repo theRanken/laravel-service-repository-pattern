@@ -2,9 +2,9 @@
 
 namespace Ranken\ServiceRepositoryGenerator\Commands;
 
+use Illuminate\Support\Str;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 
 class MakeServiceWithRepository extends Command
 {
@@ -34,7 +34,7 @@ class MakeServiceWithRepository extends Command
 
     protected function initializeProperties()
     {
-        $this->baseNamespace = $this->laravel->getNamespace();
+        $this->baseNamespace = app()->getNamespace();
         $this->servicesPath = config('service-repo.services_path', 'Services');
         $this->repositoriesPath = config('service-repo.repositories_path', 'Repositories');
     }
