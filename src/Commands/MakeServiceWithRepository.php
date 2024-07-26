@@ -98,8 +98,8 @@ class MakeServiceWithRepository extends Command
         }
 
         $namespace = $this->baseNamespace . str_replace('/', '\\', $this->servicesPath);
-        $interface = "{$namespace}\\{$name}\\{$name}ServiceInterface";
-        $implementation = "{$namespace}\\{$name}\\{$name}Service";
+        $interface = "\\{$namespace}\\{$name}\\{$name}ServiceInterface";
+        $implementation = "\\{$namespace}\\{$name}\\{$name}Service";
         $binding = "\$this->app->bind({$interface}::class, {$implementation}::class);";
 
         $this->updateProvider($providerPath, $binding);
