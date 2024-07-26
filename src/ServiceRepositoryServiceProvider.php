@@ -20,12 +20,12 @@ class ServiceRepositoryServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/config/service-repo.php' => config_path('service-repo.php'),
+                __DIR__ .'/config/service-repo.php' => config_path('service-repo.php'),
             ], 'config');
 
             $this->publishes([
-                __DIR__.'/Providers/ServicePatternProvider.php' => app_path('Providers/ServicePatternProvider.php'),
-                __DIR__.'/Providers/RepositoryPatternProvider.php' => app_path('Providers/RepositoryPatternProvider.php'),
+                __DIR__ .'/Providers/ServicePatternProvider.php' => app_path('Providers/ServicePatternProvider.php'),
+                __DIR__ .'/Providers/RepositoryPatternProvider.php' => app_path('Providers/RepositoryPatternProvider.php'),
             ], 'providers');
         }
     }

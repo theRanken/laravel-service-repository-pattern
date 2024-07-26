@@ -22,6 +22,10 @@ class ComposerStaticInit09ff312ef1f699691fcb6d4ac03d4cc7
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Ranken\\ServiceRepositoryGenerator\\ClassMap' => __DIR__ . '/../..' . '/src/ClassMap.php',
+        'Ranken\\ServiceRepositoryGenerator\\Commands\\InstallPackage' => __DIR__ . '/../..' . '/src/Commands/InstallPackage.php',
+        'Ranken\\ServiceRepositoryGenerator\\Commands\\MakeServiceWithRepository' => __DIR__ . '/../..' . '/src/Commands/MakeServiceWithRepository.php',
+        'Ranken\\ServiceRepositoryGenerator\\ServiceRepositoryServiceProvider' => __DIR__ . '/../..' . '/src/ServiceRepositoryServiceProvider.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

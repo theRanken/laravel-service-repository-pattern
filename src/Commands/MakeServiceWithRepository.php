@@ -15,10 +15,15 @@ class MakeServiceWithRepository extends Command
     protected $servicesPath;
     protected $repositoriesPath;
 
+    public function __construct(){
+        parent::__construct();
+        $this->baseNamespace = app()->getNamespace();
+        $this->servicesPath = config('service-repo.services_path', 'Services');
+        $this->repositoriesPath = config('service-repo.repositories_path', 'Repositories');
+    }
+    
     public function handle()
     {
-        $this->initializeProperties();
-
         $name = $this->filterName($this->argument('name'));
         $createRepository = $this->option('repository');
 
@@ -30,13 +35,6 @@ class MakeServiceWithRepository extends Command
         }
 
         $this->updateServiceProvider($name);
-    }
-
-    protected function initializeProperties()
-    {
-        $this->baseNamespace = app()->getNamespace();
-        $this->servicesPath = config('service-repo.services_path', 'Services');
-        $this->repositoriesPath = config('service-repo.repositories_path', 'Repositories');
     }
 
     protected function filterName($name)
